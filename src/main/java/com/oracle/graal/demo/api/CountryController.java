@@ -18,10 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.oracle.graal.demo.model.Country;
 import com.oracle.graal.demo.repos.CountryRepository;
 
+import io.micrometer.core.annotation.Timed;
+
 /**
  *
  * @author rjay
  */
+@Timed
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("api/countries")
